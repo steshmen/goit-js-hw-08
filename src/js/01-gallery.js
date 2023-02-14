@@ -15,7 +15,6 @@ const markup = galleryItems.map(({ preview, original, description }) => {
 
 galleryRef.innerHTML = markup;
 
-
 const lightbox = new SimpleLightbox('.gallery a', {
     captions: true,
     captionSelector: 'img',
