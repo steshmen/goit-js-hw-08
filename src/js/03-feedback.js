@@ -23,7 +23,9 @@ function pageLoad() {
 
 function onSubmit(evt) {
     evt.preventDefault();
+    if (localStorage.getItem(KEY_F)) {
+        console.log(JSON.parse(localStorage.getItem(KEY_F)));
+    }
     evt.target.reset();
     localStorage.removeItem(KEY_F);
-    console.log(obj);
 }

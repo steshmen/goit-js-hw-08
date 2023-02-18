@@ -8,10 +8,10 @@ const player = new Player(iframe);
 
 player.on('timeupdate', throttle(onUpdate, 1000));
 function onUpdate(data) {
-    localStorage.setItem(KEY, JSON.stringify(data));
+    localStorage.setItem(KEY, data.seconds.toString());
 }
 try {
-    player.setCurrentTime(JSON.parse(localStorage.getItem(KEY)).seconds);
+    player.setCurrentTime(localStorage.getItem(KEY));
 } catch (error) {
     error;
 }
